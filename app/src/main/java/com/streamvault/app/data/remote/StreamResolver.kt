@@ -15,7 +15,7 @@ import org.json.JSONObject
  *
  * Supports:
  * 1. Direct HLS (.m3u8), DASH (.mpd), and progressive MP4/WebM streams.
- * 2. Optional user-configured Piped/Invidious-compatible JSON API endpoint (configured in Settings)
+ * 2. Optional user-configured Piped-compatible JSON API endpoint (configured in Settings)
  *    for fetching public non-DRM adaptive/progressive streams without embedding DRM circumvention.
  * 3. Fallback reference HLS adaptive stream so player quality/speed controls can be tested anytime.
  */
@@ -28,7 +28,7 @@ class StreamResolver(
     companion object {
         private const val KEY_INSTANCE_URL = "custom_api_instance_url"
 
-        // Public W3C / Apple / Blender reference adaptive HLS stream for immediate player testing
+        // Public reference adaptive HLS stream for immediate player testing
         const val DEMO_ADAPTIVE_HLS_URL =
             "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"
     }

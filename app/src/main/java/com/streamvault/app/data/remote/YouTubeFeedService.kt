@@ -24,9 +24,9 @@ class YouTubeFeedService(
     companion object {
         private const val USER_AGENT =
             "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36"
-        private val CHANNEL_ID_IN_HTML = Regex(""channelId"\s*:\s*"(UC[a-zA-Z0-9_-]{22})"")
-        private val EXTERNAL_ID_IN_HTML = Regex(""externalId"\s*:\s*"(UC[a-zA-Z0-9_-]{22})"")
-        private val RSS_LINK_IN_HTML = Regex("feeds/videos\.xml\?channel_id=(UC[a-zA-Z0-9_-]{22})")
+        private val CHANNEL_ID_IN_HTML = Regex("\"channelId\"\\s*:\\s*\"(UC[a-zA-Z0-9_-]{22})\"")
+        private val EXTERNAL_ID_IN_HTML = Regex("\"externalId\"\\s*:\\s*\"(UC[a-zA-Z0-9_-]{22})\"")
+        private val RSS_LINK_IN_HTML = Regex("feeds/videos\\.xml\\?channel_id=(UC[a-zA-Z0-9_-]{22})")
     }
 
     suspend fun resolveChannelIdFromHandle(handleOrPath: String): String = withContext(Dispatchers.IO) {

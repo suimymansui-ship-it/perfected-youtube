@@ -84,7 +84,7 @@ fun SettingsScreen(
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold
         )
-Text(
+        Text(
             text = """
                 • Zero third-party ad SDKs
                 • Media3 ExoPlayer with 144p–2160p track selection
