@@ -84,11 +84,13 @@ fun SettingsScreen(
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold
         )
-        Text(
-            text = "• Zero third-party ad SDKs
-• Media3 ExoPlayer with 144p–2160p track selection
-• Playback speed control (0.25x – 2.0x)
-• Local Room database for Favorites & Offline Downloads",
+Text(
+            text = """
+                • Zero third-party ad SDKs
+                • Media3 ExoPlayer with 144p–2160p track selection
+                • Playback speed control (0.25x – 2.0x)
+                • Local Room database for Favorites & Offline Downloads
+            """.trimIndent(),
             style = MaterialTheme.typography.bodySmall
         )
     }
